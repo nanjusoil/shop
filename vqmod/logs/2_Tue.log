@@ -1,0 +1,15 @@
+---------- Date: 2015-12-22 12:49:45 ~ IP : 144.76.8.132 ----------
+REQUEST URI : /index.php?route=account/wishlist
+MOD DETAILS:
+   modFile   : C:\xampp\htdocs\vqmod/xml/themeglobal_notification.xml
+   id        : ThemeGlobal Notification
+   version   : 2.0
+   vqmver    : 2.5.1
+   author    : ThemeGlobal
+
+File Name    : catalog/controller/account/wishlist.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $json['info'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', 'SSL'), $this->url->link('account/register', '', 'SSL'), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+
+----------------------------------------------------------------------
+
+

@@ -1,0 +1,40 @@
+2015-12-20 15:05:44 - PHP Notice:  Error: Could not load model C:/xampp/htdocs/admin/model/sale/customer_group.php! in C:\xampp\htdocs\system\engine\loader.php on line 63
+2015-12-20 15:08:34 - PHP Notice:  Undefined variable: fblogin in C:\xampp\htdocs\admin\view\template\module\fblogin.tpl on line 127
+2015-12-20 15:10:06 - PHP Warning:  require_once(C:/xampp/htdocs/system/vendor/facebook-sdk/facebook.php): failed to open stream: No such file or directory in C:\xampp\htdocs\catalog\controller\module\fblogin.php on line 19
+2015-12-20 15:30:28 - PHP Notice:  Undefined index: id in C:\xampp\htdocs\catalog\controller\account\fblogin.php on line 41
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Property access is not allowed yet in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Property access is not allowed yet in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Property access is not allowed yet in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Property access is not allowed yet in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-20 15:57:00 - PHP Warning:  DB\MySQLi::__destruct(): Couldn't fetch mysqli in C:\xampp\htdocs\system\library\db\mysqli.php on line 59
+2015-12-21 6:41:29 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\controller\design\banner.php on line 386
+2015-12-21 6:41:29 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\controller\design\banner.php on line 386
+2015-12-21 6:41:41 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\controller\design\banner.php on line 386
+2015-12-21 6:41:41 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\controller\design\banner.php on line 386
+2015-12-21 13:05:20 - PHP Warning:  unlink(C:/xampp/htdocs/system/storage/cache/cache.length_class.1.1450679444): Permission denied in C:\xampp\htdocs\system\library\cache\file.php on line 17
+2015-12-21 13:05:36 - PHP Notice:  Undefined index: id in C:\xampp\htdocs\catalog\controller\account\fblogin.php on line 41
+2015-12-21 14:09:47 - PHP Notice:  Undefined index: slider_id in C:\xampp\htdocs\catalog\controller\module\tg_tglite_revolution_slider.php on line 7
+2015-12-21 14:09:47 - PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\catalog\view\theme\themegloballite\template\module\tg_tglite_revolution_slider.tpl on line 6
+2015-12-21 14:10:14 - PHP Notice:  Undefined index: slider_id in C:\xampp\htdocs\catalog\controller\module\tg_tglite_revolution_slider.php on line 7
+2015-12-21 14:10:14 - PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\catalog\view\theme\themegloballite\template\module\tg_tglite_revolution_slider.tpl on line 6
+2015-12-21 14:10:47 - PHP Notice:  Undefined index: slider_id in C:\xampp\htdocs\catalog\controller\module\tg_tglite_revolution_slider.php on line 7
+2015-12-21 14:10:48 - PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\catalog\view\theme\themegloballite\template\module\tg_tglite_revolution_slider.tpl on line 6
+2015-12-21 14:13:03 - PHP Unknown:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in C:\xampp\htdocs\admin\controller\module\tg_themegloballite_settings.php on line 442
+2015-12-21 14:37:45 - PHP Unknown:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in C:\xampp\htdocs\admin\controller\module\tg_themegloballite_settings.php on line 442
+2015-12-21 15:52:03 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\controller\design\banner.php on line 386
+2015-12-21 15:52:03 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\controller\design\banner.php on line 386
+2015-12-21 15:54:51 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\model\design\banner.php on line 37
+2015-12-21 15:56:20 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\model\design\banner.php on line 37
+2015-12-21 15:56:20 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\model\design\banner.php on line 37
+2015-12-21 15:56:20 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\model\design\banner.php on line 37
