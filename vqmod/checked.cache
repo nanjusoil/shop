@@ -355,3 +355,11 @@ catalog\view\theme\themegloballite\template\product\manufacturer_list.tpl
 catalog\controller\product\special.php
 catalog\language\english\product\special.php
 catalog\view\theme\themegloballite\template\product\special.tpl
+catalog\controller\account\edit.php
+catalog\language\english\account\edit.php
+catalog\view\theme\themegloballite\template\account\edit.tpl
+catalog\controller\product\search.php
+catalog\language\english\product\search.php
+catalog\view\theme\themegloballite\template\product\search.tpl
+admin\controller\module\account.php
+admin\view\template\module\account.tpl

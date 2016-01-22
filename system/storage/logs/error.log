@@ -38,3 +38,4 @@
 2015-12-21 15:56:20 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\model\design\banner.php on line 37
 2015-12-21 15:56:20 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\model\design\banner.php on line 37
 2015-12-21 15:56:20 - PHP Notice:  Undefined index: sort_order in C:\xampp\htdocs\admin\model\design\banner.php on line 37
+2016-01-22 16:23:00 - PHP Notice:  Error: Could not load template C:/xampp/htdocs/catalog/view/theme/default/template/common/currency.tpl! in C:\xampp\htdocs\vqmod\vqcache\vq2-system_engine_loader.php on line 86
