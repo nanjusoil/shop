@@ -1,0 +1,2433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1800" exported="1178692706">
+	<settinggroup name="onlineoffline" title="论坛 开/关" description="该设置允许您打开或关闭论坛，并指定关闭的原因。" disporder="1" isdefault="1">
+		<setting name="boardclosed">
+			<title>论坛关闭</title>
+			<description><![CDATA[如果您需要关闭论坛，比如做些改动或者执行升级，这是一个全局开关。浏览者将无法浏览论坛，当然，他们会看到您在下面指定的原因。管理员仍然可以浏览论坛。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="boardclosed_reason">
+			<title>论坛关闭原因</title>
+			<description><![CDATA[如果您的论坛关闭，您可以在这里设置原因。浏览论坛的访问者将会看到这个信息。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[textarea]]></optionscode>
+			<settingvalue><![CDATA[论坛当前正在维护。请稍候再试。]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="details" title="站点详情" description="本节包含各种设置，如论坛的名称和地址，以及您的网站名称和网址。" disporder="2" isdefault="1">
+		<setting name="bbname">
+			<title>论坛名称</title>
+			<description><![CDATA[论坛的名称。我们建议不要超过75个字符。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[Forums]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="bburl">
+			<title>论坛网址</title>
+			<description><![CDATA[论坛的网址。<br />包括http://。不包括斜线。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="homename">
+			<title>网站名称</title>
+			<description><![CDATA[网站的名称。将以链接方式显示在论坛底部。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="homeurl">
+			<title>网站网址</title>
+			<description><![CDATA[网站的完整网址。和网站名称组成超链接显示在论坛底部。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[/]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="adminemail">
+			<title>管理员Email</title>
+			<description><![CDATA[管理员的电子邮件地址。通过论坛发送邮件的时候作为发送邮件。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="returnemail">
+			<title>返回Email</title>
+			<description><![CDATA[电子邮件地址的传入传出的答复发送的电子邮件，可以用于不答复的帐户。留空使用管理员的电子邮件地址。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contactlink">
+			<title>联系我们链接</title>
+			<description><![CDATA[这将用于论坛所有页面底部的联系我们链接。可以是一个电子邮件地址（使用电子邮件：email@website.com）或超链接。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="cookiedomain">
+			<title>Cookie域</title>
+			<description><![CDATA[设置该Cookie的域。可以保持空白。还可以以半角句点.开始以涵盖所有的子网域。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="cookiepath">
+			<title>Cookie路径</title>
+			<description><![CDATA[Cookie的路径。建议设置为论坛路径。]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[/]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="cookieprefix">
+			<title>Cookie前缀</title>
+			<description><![CDATA[Cookie的前缀。对于在一个域名使用多个MyBB或者和其它软件存在冲突时非常有用。如果不指定则不使用前缀。]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showvernum">
+			<title>显示版本号</title>
+			<description><![CDATA[允许关闭MyBB版本号的显示。]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="mailingaddress">
+			<title>邮寄地址</title>
+			<description><![CDATA[如果您有一个邮寄地址，请在此输入。这将显示在COPPA相关表]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[textarea]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="faxno">
+			<title>传真</title>
+			<description><![CDATA[如果您有一个传真号，请在此输入。这将显示在COPPA相关表。]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="general" title="常规配置" description="本节用于管理常规设置内容。" disporder="3" isdefault="1">
+		<setting name="bblanguage">
+			<title>默认语言</title>
+			<description><![CDATA[默认的语言，应用于游客和没有在控制面板选择语言的用户。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[language]]></optionscode>
+			<settingvalue><![CDATA[chinese]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="captchaimage">
+			<title><![CDATA[注册和发帖验证码]]></title>
+			<description><![CDATA[为了阻止自动注册发贴机，您可以选择一种图片验证类型。CAPTCHAs内容详情见MyBB官方文档。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[select
+0=No CAPTCHA
+1=MyBB Default CAPTCHA
+2=reCAPTCHA
+3=Are You a Human]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="captchapublickey">
+			<title><![CDATA[reCAPTCHA Public Key]]></title>
+			<description><![CDATA[reCAPTCHA 公匙。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="captchaprivatekey">
+			<title><![CDATA[reCAPTCHA Private Key]]></title>
+			<description><![CDATA[reCAPTCHA 私匙。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="ayahpublisherkey">
+			<title><![CDATA[Are You a Human Publisher Key]]></title>
+			<description><![CDATA[Are You a Human 公匙。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="ayahscoringkey">
+			<title><![CDATA[Are You a Human Scoring Key]]></title>
+			<description><![CDATA[Are You a Human 私匙。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="reportmethod">
+			<title>报告帖子方式</title>
+			<description><![CDATA[请从下面的列表选择一个报告帖子的方式。存储在数据库相对来说比较好。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[radio
+db=保存在数据库
+pms=发送到短消息
+email=用Email发送]]></optionscode>
+			<settingvalue><![CDATA[db]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="statslimit">
+			<title>统计资料限制</title>
+			<description><![CDATA[在统计资料页面显示回复最多和人气最多的主题数量。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="statstopreferrer">
+			<title>在统计页面显示推介排行</title>
+			<description><![CDATA[是否要在stats.php页面展示推介排行？这将增加额外的查询。]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="decpoint">
+			<title>小数点</title>
+			<description><![CDATA[您所在地区使用的小数点符号。]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[.]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="thousandssep">
+			<title>数字千分符</title>
+			<description><![CDATA[想要使用的千分符。比如设为','，则数字1200会显示为1,200]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[,]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showlanguageselect">
+			<title>在底部显示语言选择框</title>
+			<description><![CDATA[如果不想显示，请设置为“否”。 如果只安装了一种语言则此项会被忽略。]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showthemeselect">
+			<title>在底部显示主题选择框</title>
+			<description><![CDATA[如果不想显示，请设置为“否”。]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxmultipagelinks">
+			<title>最大分页显示数</title>
+			<description><![CDATA[这里您可以设置上一页、下一页和分页的显示数目。]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="jumptopagemultipage">
+			<title>分页中显示跳转到页</title>
+			<description><![CDATA[如果分页数大于"最大分页显示数"，是否要显示一个"跳转到页"?]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="no_plugins">
+			<title>关闭所有插件</title>
+			<description><![CDATA[将此项设为是则所有插件都会被关闭，等同于在./inc/init.php文件顶部手动定义NO_PLUGINS。]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="soft_delete">
+			<title>开启回收站</title>
+			<description><![CDATA[开启则可以恢复用户删除的主题和帖子。]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="helpsearch">
+			<title>开启帮助文档搜索</title>
+			<description><![CDATA[开启则允许用户搜索帮助文档。]]></description>
+			<disporder>18</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="deleteinvites">
+			<title>组邀请过期时间</title>
+			<description><![CDATA[组邀请在多少天以后将过期。设为0则永不过期。]]></description>
+			<disporder>19</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[180]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hidewebsite">
+			<title>隐藏网站字段</title>
+			<description><![CDATA[选择要隐藏网站字段的组。]]></description>
+			<disporder>20</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hidesignatures">
+			<title>隐藏签名</title>
+			<description><![CDATA[选择要隐藏签名的组。]]></description>
+			<disporder>21</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="server" title="服务器优化选项" description="这些选项允许您设置服务器和性能优化以减少服务器负载，并且提升论坛性能。" disporder="4" isdefault="1">
+		<setting name="seourls">
+			<title>启用搜索引擎友好URL?</title>
+			<description><![CDATA[启用SEF URL 将 showthread.php?tid=1 变成 thread-1.html 。 <strong>自动检测在某些服务器上可能无法使用。</strong> 详情请查阅 <a href="http://docs.mybb.com/SEF_URLs.html">MyBB Docs</a> ]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[select
+auto=自动检测
+yes=开启
+no=关闭]]></optionscode>
+			<settingvalue><![CDATA[auto]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="seourls_archive">
+			<title>在简化版中启用搜索引擎友好URL?</title>
+			<description><![CDATA[ <strong>启用此项请确保简化模式可以正常工作。</strong>]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="gzipoutput">
+			<title>使用GZip压缩页面?</title>
+			<description><![CDATA[当页面发送至浏览器时您想使用GZip压缩它们吗?这可以加快页面加载速度并减少流量。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="gziplevel">
+			<title>GZip压缩级别</title>
+			<description><![CDATA[Set the level for GZip Page Compression from 0-9.  (0=no compression, 9=maximum compression). A level of 4 is recommended for most installations.]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[4]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="nocacheheaders">
+			<title>发送无缓存头部</title>
+			<description><![CDATA[这个选项可以防止浏览器缓存页面。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="redirects">
+			<title>友好重定向页面</title>
+			<description><![CDATA[这个选项将启用一个过渡页面用来取代突然的跳转。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="load">
+			<title>*NIX负载限制</title>
+			<description><![CDATA[服务器最大负载，0为不限制，建议设置为5.0]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="tplhtmlcomments">
+			<title>输出模板开始/结束评论?</title>
+			<description><![CDATA[这将启用或禁用模板输出开始/结束评论在HTML中。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="use_xmlhttprequest">
+			<title>启用XMLHttp请求功能?</title>
+			<description><![CDATA[这将启用或禁用XMLHttp请求功能。]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="extraadmininfo">
+			<title>高级统计/调试信息</title>
+			<description><![CDATA[在所有页面的底部显示服务器加载、生成时间和内存使用情况等。请注意只有管理员才能看到这些信息。]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="uploadspath">
+			<title>上传路径</title>
+			<description><![CDATA[论坛上传附件的路径。 其 <b>必须为 chmod 777</b> (*nix 服务器)。]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[./uploads]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="useerrorhandling">
+			<title>使用错误处理</title>
+			<description><![CDATA[如果不想要处理MyBB遇到的错误情况，可以将其设为关闭。建议保持开启状态。]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="errorlogmedium">
+			<title>错误记录内容</title>
+			<description><![CDATA[错误处理使用的类型]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[select
+none=不记录
+log=日志错误
+email=Email错误
+both=日志和email错误
+]]></optionscode>
+			<settingvalue><![CDATA[none]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="errortypemedium">
+			<title>错误类型内容</title>
+			<description><![CDATA[显示的错误类型。建议隐藏所有错误和警告，使用日志记录。]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[select
+warning=警告
+error=错误
+both=警告和错误
+none=隐藏警告和错误
+]]></optionscode>
+			<settingvalue><![CDATA[both]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="errorloglocation">
+			<title>错误日志的位置</title>
+			<description><![CDATA[存储日志的位置，如果指定的话。]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[./error.log]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="enableforumjump">
+			<title>启用论坛跳转菜单?</title>
+			<description><![CDATA[论坛跳转菜单显示在论坛和主题页面。如果版块数量比较多，这将大大增加服务器负载。设置为“否”可以禁用此功能。]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="ip_forwarded_check">
+			<title>检查用户的IP地址?</title>
+			<description><![CDATA[是否要使用HTTP_X_FORWARDED_FOR 或 HTTP_X_REAL_IP检查用户的IP地址？不清楚请设为否。]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="minifycss">
+			<title>最小化样式表?</title>
+			<description><![CDATA[是否要最小化样式表？选择是可以节约带宽并加快页面加载速度。]]></description>
+			<disporder>18</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="usecdn">
+			<title>使用CDN?</title>
+			<description><![CDATA[可以指定一个CDN以加速css、js、图片等静态文件。是否要启用此功能？]]></description>
+			<disporder>19</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="cdnurl">
+			<title>为静态文件指定URL</title>
+			<description><![CDATA[如果启用了CDN选项，请在此输入CDN的地址，请确保URL有效并且结尾没有斜杠。]]></description>
+			<disporder>20</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="cdnpath">
+			<title>保存静态文件的路径</title>
+			<description><![CDATA[如果启用了CDN选项，可以选择输入静态文件的存储路径。该项仅用于 "推送" 类型的CDN或本地子域名设置。路径结尾无斜杠。]]></description>
+			<disporder>21</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+	</settinggroup>
+	<settinggroup name="datetime" title="日期和时间格式" description="这里您可以指定不同的日期和时间显示格式。" disporder="5" isdefault="1">
+		<setting name="dateformat">
+			<title>日期格式</title>
+			<description><![CDATA[日期的格式。该格式使用 PHP date() 函数。我们建议不要修改此项除非您知道您在干什么。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[m-d-Y]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="timeformat">
+			<title>时间格式</title>
+			<description><![CDATA[论坛使用的时间格式。该格式使用 PHP date() 函数。我们建议不要修改此项除非您知道您在干什么。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[h:i A]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="datetimesep">
+			<title>日期/时间 分隔符</title>
+			<description><![CDATA[分隔日期和时间(通常为空格或逗号)]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[, ]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="regdateformat">
+			<title>注册日期格式</title>
+			<description><![CDATA[这个格式是指用户注册日期的格式。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[M Y]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="timezoneoffset">
+			<title>默认时区设置</title>
+			<description><![CDATA[这里您可以设置游客和会员使用的默认时区。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[php
+<select name=\"upsetting[{$setting['name']}]\">
+<option value=\"-12\" ".($setting['value'] == -12?"selected=\"selected\"":"").">GMT -12:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -12).")</option>
+<option value=\"-11\" ".($setting['value'] == -11?"selected=\"selected\"":"").">GMT -11:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -11).")</option>
+<option value=\"-10\" ".($setting['value'] == -10?"selected=\"selected\"":"").">GMT -10:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -10).")</option>
+<option value=\"-9.5\" ".($setting['value'] == -9.5?"selected=\"selected\"":"").">GMT -9:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -9.5).")</option>
+<option value=\"-9\" ".($setting['value'] == -9?"selected=\"selected\"":"").">GMT -9:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -9).")</option>
+<option value=\"-8\" ".($setting['value'] == -8?"selected=\"selected\"":"").">GMT -8:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -8).")</option>
+<option value=\"-7\" ".($setting['value'] == -7?"selected=\"selected\"":"").">GMT -7:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -7).")</option>
+<option value=\"-6\" ".($setting['value'] == -6?"selected=\"selected\"":"").">GMT -6:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -6).")</option>
+<option value=\"-5\" ".($setting['value'] == -5?"selected=\"selected\"":"").">GMT -5:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -5).")</option>
+<option value=\"-4.5\" ".($setting['value'] == -4.5?"selected=\"selected\"":"").">GMT -4:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -4.5).")</option>
+<option value=\"-4\" ".($setting['value'] == -4?"selected=\"selected\"":"").">GMT -4:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -4).")</option>
+<option value=\"-3.5\" ".($setting['value'] == -3.5?"selected=\"selected\"":"").">GMT -3:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -3.5).")</option>
+<option value=\"-3\" ".($setting['value'] == -3?"selected=\"selected\"":"").">GMT -3:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -3).")</option>
+<option value=\"-2\" ".($setting['value'] == -2?"selected=\"selected\"":"").">GMT -2:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -2).")</option>
+<option value=\"-1\" ".($setting['value'] == -1?"selected=\"selected\"":"").">GMT -1:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, -1).")</option>
+<option value=\"0\" ".($setting['value'] == 0?"selected=\"selected\"":"").">GMT (".my_date($mybb->settings['timeformat'], TIME_NOW, 0).")</option>
+<option value=\"+1\" ".($setting['value'] == 1?"selected=\"selected\"":"").">GMT +1:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 1).")</option>
+<option value=\"+2\" ".($setting['value'] == 2?"selected=\"selected\"":"").">GMT +2:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 2).")</option>
+<option value=\"+3\" ".($setting['value'] == 3?"selected=\"selected\"":"").">GMT +3:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 3).")</option>
+<option value=\"+3.5\" ".($setting['value'] == 3.5?"selected=\"selected\"":"").">GMT +3:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 3.5).")</option>
+<option value=\"+4\" ".($setting['value'] == 4?"selected=\"selected\"":"").">GMT +4:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 4).")</option>
+<option value=\"+4.5\" ".($setting['value'] == 4.5?"selected=\"selected\"":"").">GMT +4:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 4.5).")</option>
+<option value=\"+5\" ".($setting['value'] == 5?"selected=\"selected\"":"").">GMT +5:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 5).")</option>
+<option value=\"+5.5\" ".($setting['value'] == 5.5?"selected=\"selected\"":"").">GMT +5:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 5.5).")</option>
+<option value=\"+5.75\" ".($setting['value'] == 5.75?"selected=\"selected\"":"").">GMT +5:45 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 5.75).")</option>
+<option value=\"+6\" ".($setting['value'] == 6?"selected=\"selected\"":"").">GMT +6:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 6).")</option>
+<option value=\"+6.5\" ".($setting['value'] == 6.5?"selected=\"selected\"":"").">GMT +6:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 6.5).")</option>
+<option value=\"+7\" ".($setting['value'] == 7?"selected=\"selected\"":"").">GMT +7:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 7).")</option>
+<option value=\"+8\" ".($setting['value'] == 8?"selected=\"selected\"":"").">GMT +8:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 8).")</option>
+<option value=\"+9\" ".($setting['value'] == 9?"selected=\"selected\"":"").">GMT +9:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 9).")</option>
+<option value=\"+9.5\" ".($setting['value'] == 9.5?"selected=\"selected\"":"").">GMT +9:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 9.5).")</option>
+<option value=\"+10\" ".($setting['value'] == 10?"selected=\"selected\"":"").">GMT +10:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 10).")</option>
+<option value=\"+10.5\" ".($setting['value'] == 10.5?"selected=\"selected\"":"").">GMT +10:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 10.5).")</option>
+<option value=\"+11\" ".($setting['value'] == 11?"selected=\"selected\"":"").">GMT +11:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 11).")</option>
+<option value=\"+11.5\" ".($setting['value'] == 11.5?"selected=\"selected\"":"").">GMT +11:30 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 11.5).")</option>
+<option value=\"+12\" ".($setting['value'] == 12?"selected=\"selected\"":"").">GMT +12:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 12).")</option>
+<option value=\"+12.75\" ".($setting['value'] == 12.75?"selected=\"selected\"":"").">GMT +12:45 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 12.75).")</option>
+<option value=\"+13\" ".($setting['value'] == 13?"selected=\"selected\"":"").">GMT +13:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 13).")</option>
+<option value=\"+14\" ".($setting['value'] == 14?"selected=\"selected\"":"").">GMT +14:00 Hours (".my_date($mybb->settings['timeformat'], TIME_NOW, 14).")</option>
+</select>]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="dstcorrection">
+			<title>夏令时</title>
+			<description><![CDATA[如果您的时区选择正确，但时间相差超过一小时，请启用夏令时更正。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="forumhome" title="论坛首页选项" description="本节允许您管理论坛主页的显示选项 (index.php) ，如启用或禁用不同的功能。" disporder="6" isdefault="1">
+		<setting name="showdescriptions">
+			<title>显示版块描述?</title>
+			<description><![CDATA[此选项允许您关闭版块描述。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="subforumsindex">
+			<title>显示子版块在论坛首页</title>
+			<description><![CDATA[要显示子版块的数目，设置为0不显示子版块。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[2]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="subforumsstatusicons">
+			<title>显示子版块状态图标?</title>
+			<description><![CDATA[显示图标用来表明子论坛是否有新帖？如果不在首页显示子版块，则此项不起作用。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hideprivateforums">
+			<title>隐藏私有版块?</title>
+			<description><![CDATA[设置此项为是可以隐藏私有版块。此选项也会在版块跳转里隐藏私有版块和所有子版块。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="modlist">
+			<title>版块版主显示</title>
+			<description><![CDATA[这里您可以设置在index.php 和 forumdisplay.php页面打开或关闭每个版块的版主显示。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showbirthdays">
+			<title>显示今日过生日的用户?</title>
+			<description><![CDATA[您想在首页显示今天过生日的用户?]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showbirthdayspostlimit">
+			<title>只显示有x发帖量的用户生日</title>
+			<description><![CDATA[您可以选择只显示达到指定发帖数的用户的生日。设为0则无限制。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showwol">
+			<title>显示谁在线?</title>
+			<description><![CDATA[在论坛首页显示当前活动的用户。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showindexstats">
+			<title>显示简单统计资料</title>
+			<description><![CDATA[想要在论坛首页显示主题数、帖数、会员数和最后注册的用户？]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showforumviewing">
+			<title>显示活动用户所在版块</title>
+			<description><![CDATA[显示每个当前活动的用户所在的版块。]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="forumdisplay" title="论坛显示选项" description="本节允许您管理论坛显示设置 (forumdisplay.php) ，如启用或禁用不同的功能。" disporder="7" isdefault="1">
+		<setting name="threadsperpage">
+			<title>每页主题数</title>
+			<description><![CDATA[每页显示主题数]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[20]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hottopic">
+			<title>热门话题回复数</title>
+			<description><![CDATA[达到热门话题所需要的回复数]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[20]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hottopicviews">
+			<title>热门话题人气</title>
+			<description><![CDATA[达到热门话题所需要的人气]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[150]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="usertppoptions">
+			<title>用户可选的每页主题数</title>
+			<description><![CDATA[如果您想允许用户选择每页显示多少主题数，输入使用半角逗号分隔的数字选项。如果这里留空则不允许用户选择每页显示多少主题数。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10,15,20,25,30,40,50]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="dotfolders">
+			<title>使用“点”图标</title>
+			<description><![CDATA[您是否想在主题指示图标(用来表明新帖,热贴,有无回复等)上显示一个“点”用来表明当前登录用户是否曾经参与到其中.]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowthreadratings">
+			<title>使用主题评分?</title>
+			<description><![CDATA[允许用户对主题进行评分?]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="browsingthisforum">
+			<title>用户浏览此论坛</title>
+			<description><![CDATA[这里您可以关闭“用户浏览此论坛”功能。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="announcementlimit">
+			<title>公告限制</title>
+			<description><![CDATA[公告最大显示的数目。设置为0禁止显示所有公告。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[2]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="readparentforums">
+			<title>尝试标记上级版面为已读</title>
+			<description><![CDATA[如子论坛没有未读帖子则将上级论坛设为已读。请注意开启此项将占用额外的资源和数据库查询。更多详情见 <a href="http://docs.mybb.com/165.html">MyBB Docs</a> ]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="showthread" title="显示主题选项" description="本节允许您管理主题显示页面的相关设置(showthread.php)。" disporder="8" isdefault="1">
+		<setting name="postlayout">
+			<title>帖子布局</title>
+			<description><![CDATA[允许您在经典布局和新的横向布局之间切换。经典布局在帖子的左边显示作者信息，横向布局在帖子的上边显示作者信息。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[radio
+horizontal=水平模式
+classic=经典模式]]></optionscode>
+			<settingvalue><![CDATA[horizontal]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postsperpage">
+			<title>每页帖子数:</title>
+			<description><![CDATA[每页显示的帖子数，我们建议不要超过20以使网速较慢的人们也可以正常访问。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="userpppoptions">
+			<title>用户可选每页帖子数</title>
+			<description><![CDATA[如果您允许用户自行选择主题每页显示多少回帖，请在下面输入可供选择的数目，使用半角逗号分隔。如果留空则禁用此功能。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[5,10,15,20,25,30,40,50]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postmaxavatarsize">
+			<title>最大头像尺寸</title>
+			<description><![CDATA[在每个帖子中显示的头像的最大尺寸。如果头像过大，将会被自动缩放为下面指定的大小。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[55x55]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="threadreadcut">
+			<title>从数据库读取主题(天)</title>
+			<description><![CDATA[您想保持多少天从数据库读取主题信息。对于大型论坛，我们不推荐数字太大，这会使论坛变慢。设置为0可以禁用此功能。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[7]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="threadusenetstyle">
+			<title>USENET样式主题查看</title>
+			<description><![CDATA[选择是将导致帖子在USENET中看起来比较相似，选择否的话看起来比较现代。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="quickreply">
+			<title>显示快速回复框</title>
+			<description><![CDATA[允许您设置主题底部是否显示快速回复框。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="multiquote">
+			<title>显示多重引用按钮</title>
+			<description><![CDATA[多重引用按钮允许用户选择一系列帖子然后回复的时候会引用这些帖子。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showsimilarthreads">
+			<title>显示“相似主题”表格</title>
+			<description><![CDATA[相似主题表格中显示读过的主题的相关主题。您可以在下面设置关联性。]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="similarityrating">
+			<title>相似主题关联性比率</title>
+			<description><![CDATA[这允许您限制相似主题的关联性（0表示不被关联）。这个数值不应大于10，并且对于较大论坛不应过小（<5）。 Does not apply to PgSQL databases.]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="similarlimit">
+			<title>相似主题限制</title>
+			<description><![CDATA[这里您可以改变在相似主题表格中总共显示多少个相似主题。对于使用56k带宽的用户建议不要超过15个。]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showforumpagesbreadcrumb">
+			<title>显示论坛多页下拉菜单</title>
+			<description><![CDATA[如果论坛有超过1页的主题，是否要在导航中显示一个下拉分页菜单？]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="browsingthisthread">
+			<title>用户浏览此主题</title>
+			<description><![CDATA[在这里你可以关闭 '用户浏览此主题' 功能。]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="delayedthreadviews">
+			<title>延迟主题人气更新</title>
+			<description><![CDATA[如果启用此项，主题阅览次数将在后台由计划任务系统更新。如果不启用，主题阅览次数计数器将即时递增。]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="member" title="登录和注册选项" description="这里可以管理用户注册和登录的相关选项。" disporder="9" isdefault="1">
+		<setting name="disableregs">
+			<title>禁用注册</title>
+			<description><![CDATA[允许关闭用户注册。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="regtype">
+			<title>注册方式</title>
+			<description><![CDATA[请选择一种用户注册的方式。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[select
+instant=直接激活
+verify=发送email验证
+randompass=发送随机密码
+admin=管理员激活
+both=Email验证 & 管理员激活]]></optionscode>
+			<settingvalue><![CDATA[verify]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="forcelogin">
+			<title>用户必须登录</title>
+			<description><![CDATA[设置为是则访客必须注册或登录才能访问论坛。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="minnamelength">
+			<title>最小用户名长度</title>
+			<description><![CDATA[用户注册时可以使用的用户名的最小字符数。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[3]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxnamelength">
+			<title>最大用户名长度</title>
+			<description><![CDATA[用户注册时可以使用的用户名的最大字符数。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[30]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="minpasswordlength">
+			<title>最小密码长度</title>
+			<description><![CDATA[用户注册时可以使用的密码的最小字符数。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[6]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxpasswordlength">
+			<title>最大密码长度</title>
+			<description><![CDATA[用户注册时可以使用的密码的最大字符数。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[30]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="requirecomplexpasswords">
+			<title>需要一个复杂的密码?</title>
+			<description><![CDATA[你希望用户使用复杂的密码？复杂的密码需要至少一个大写字母，小写字母和一个数字。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="betweenregstime">
+			<title>注册时间间隔</title>
+			<description><![CDATA[同一IP注册帐户的时间间隔。单位：小时。]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[24]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxregsbetweentime">
+			<title>同一IP地址最大注册数</title>
+			<description><![CDATA[该选项允许设置同一IP地址注册用户的最大数。]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[2]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowmultipleemails">
+			<title><![CDATA[允许同一电子邮件多次注册?]]></title>
+			<description><![CDATA[如果您想一个电子邮件可以注册多个账户，请选择是，否则选择否。]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="emailkeep">
+			<title>用户保持Email</title>
+			<description><![CDATA[如果一个当前用户的email已被列入黑名单，是否允许他注册？]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hiddencaptchaimage">
+			<title>显示一个隐藏的CAPTCHA</title>
+			<description><![CDATA[是否要在用户注册时显示一个隐藏的CAPTCHA字段？这可以阻止自动注册机。]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="hiddencaptchaimagefield">
+			<title>隐藏CAPTCHA字段</title>
+			<description><![CDATA[您可以为隐藏的CAPTCHA字段指定一个名称]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[email3]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="usereferrals">
+			<title>使用推荐系统</title>
+			<description><![CDATA[您想在此论坛使用推荐系统?]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="coppa">
+			<title>COPPA承诺</title>
+			<description><![CDATA[如果想要开启 <a href="http://www.coppa.org/comply.htm">COPPA</a> 支持，请在下面选择注册限制。]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[select
+enabled=开启
+deny=拒绝13岁以下的用户
+disabled=关闭此功能]]></optionscode>
+			<settingvalue><![CDATA[disabled]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="username_method">
+			<title>允许的登录方式</title>
+			<description><![CDATA[登录时可使用的方式。]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[select
+0=仅用户名
+1=仅email
+2=用户名和email均可]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>0</isdefault>
+		</setting>
+		<setting name="failedcaptchalogincount">
+			<title>验证码阀值设定</title>
+			<description><![CDATA[当用户登录失败次数超过该设定值时，将被要求输入验证码。设置为0表示禁用此功能。]]></description>
+			<disporder>18</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[3]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="failedlogincount">
+			<title>登陆失败次数</title>
+			<description><![CDATA[尝试登陆的次数。设置为0则禁用。]]></description>
+			<disporder>19</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="failedlogintime">
+			<title>登陆失败时间间隔</title>
+			<description><![CDATA[登陆失败以后允许下次尝试登陆的时间间隔，单位：分钟。设置为0则禁用。]]></description>
+			<disporder>20</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="failedlogintext">
+			<title>显示登陆失败次数</title>
+			<description><![CDATA[您想显示用户登陆失败了多少次，还剩多少次?]]></description>
+			<disporder>21</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="regtime">
+			<title>最短注册时间</title>
+			<description><![CDATA[用户填写表单的最短时间(秒)，用于防范自动注册机，设为0则关闭此功能。]]></description>
+			<disporder>22</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="securityquestion">
+			<title>显示安全问题</title>
+			<description><![CDATA[是否要显示一个用户在注册时必须回答的安全问题？]]></description>
+			<disporder>23</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="profile" title="个人资料选项" description="管理用户个人资料选项。" disporder="10" isdefault="1">
+		<setting name="sigmycode">
+			<title>在签名中使用MyCode</title>
+			<description><![CDATA[允许用户在签名中使用MyCode?]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="sigcountmycode">
+			<title>MyCode影响签名长度</title>
+			<description><![CDATA[是否希望在签名中MyCode也被计算字符数?]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="sigsmilies">
+			<title>在签名中允许表情</title>
+			<description><![CDATA[在签名中是否允许使用签名?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="sightml">
+			<title>在签名中允许HTML</title>
+			<description><![CDATA[在签名中是否允许使用HTML?]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="sigimgcode">
+			<title>在签名中允许 [img] 代码</title>
+			<description><![CDATA[在签名中是否允许使用 [img] 代码?]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxsigimages">
+			<title>每个签名最大使用图片数</title>
+			<description><![CDATA[输入签名中可以使用的最大图片数量（包括表情）。设置为0禁止在签名中使用图片。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[2]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="siglength">
+			<title>签名长度限制</title>
+			<description><![CDATA[签名最大字符数。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[255]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="useravatar">
+			<title>默认用户头像</title>
+			<description><![CDATA[如果用户没有设置一个自定义头像则会用此默认头像代替。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[images/default_avatar.png]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="useravatardims">
+			<title>默认头像尺寸</title>
+			<description><![CDATA[宽|高(举例：40|40)]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[100|100]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="useravatarrating">
+			<title>头像评级</title>
+			<description><![CDATA[设置Gravatar头像的最大评级，如果用户的Gravatar评级超出此限制则会显示默认头像。这些评级分别为：
+<ul>
+<li><strong>G</strong>: 没有暴力血腥色情画面，适合所有年龄观看</li>
+<li><strong>PG</strong>: 可能包含不雅的手势、轻度的暴力血腥、清凉的穿著。</li>
+<li><strong>R</strong>: 包含不雅的手势或是言语，有暴力、裸露、毒品的使用。</li>
+<li><strong>X</strong>: 包含性和血腥暴力。儿童不宜。</li>
+</ul>]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[select
+g=G
+pg=PG
+r=R
+x=X]]></optionscode>
+			<settingvalue><![CDATA[g]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxavatardims">
+			<title>最大头像尺寸</title>
+			<description><![CDATA[头像可以使用的最大尺寸，格式为宽<b>x</b>高。如果留空则不限制尺寸。]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[100x100]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="avatarsize">
+			<title>最大上传头像大小</title>
+			<description><![CDATA[最大文件大小，单位：KB。]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[25]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="avatarresizing">
+			<title>头像改变大小方式</title>
+			<description><![CDATA[如果您想自动改变所有尺寸较大的头像、为用户提供选择、调整头像或者不调整头像，都可以在这里设置。]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[select
+auto=自动调整头像
+user=让用户调整头像
+disabled=关闭此功能]]></optionscode>
+			<settingvalue><![CDATA[auto]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="avataruploadpath">
+			<title>头像上传路径</title>
+			<description><![CDATA[这是自定义头像上传的路径。该目录权限<b>必须为chmod777</b>（可写）。]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[./uploads/avatars]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="customtitlemaxlength">
+			<title>自定义用户头衔最大长度</title>
+			<description><![CDATA[自定义头衔的最大字符数。]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[40]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowaway">
+			<title>允许离开状态?</title>
+			<description><![CDATA[用户可以设置状态为“离开”并自定义原因和返回日期?]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowbuddyonly">
+			<title>只允许給好友发短消息?</title>
+			<description><![CDATA[只允许用户給好友列表中的其它用户发送站内短信?]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="posting" title="发帖相关" description="这些选项控制发帖相关的各种要素。" disporder="11" isdefault="1">
+		<setting name="minmessagelength">
+			<title>最小信息长度</title>
+			<description><![CDATA[发帖最小字符数。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxmessagelength">
+			<title>最大信息长度</title>
+			<description><![CDATA[发帖最大字节数，设为0则不限制长度。
+<br />此项应当和数据表中使用的类型大小一致，以下为每种类型的最大长度。
+<ul>
+	<li>TEXT: 65535 (默认)</li>
+	<li>MEDIUMTEXT: 16777215</li>
+	<li>LONGTEXT: 4294967295</li>
+</ul>]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[65535]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="mycodemessagelength">
+			<title>MyCode受到最小信息长度影响?</title>
+			<description><![CDATA[MyCode是否被计入最小长度的限制？]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postfloodcheck">
+			<title>灌水检查</title>
+			<description><![CDATA[如果想进行灌水检查，请打开此项。在下面指定时间间隔。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postfloodsecs">
+			<title>灌水间隔</title>
+			<description><![CDATA[设置时间，单位：秒。发帖间隔时间小于此值则视为灌水。只在灌水检查设置为开时起作用。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[60]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postmergemins">
+			<title>帖子合并时间</title>
+			<description><![CDATA[启用此项，某用户在限定时间内跟自己的贴并且帖与帖中间没有其他用户的帖子的话，则合并之，中间用水平线分割。设置时间限制，单位：分钟。设置为0或者留空禁用此功能。默认为60分钟。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[60]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postmergefignore">
+			<title>帖子合并忽略的版块</title>
+			<description><![CDATA[从自动合并功能中忽略的版块。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[forumselect]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postmergeuignore">
+			<title>帖子合并忽略的用户组</title>
+			<description><![CDATA[从合并功能中忽略的用户组。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[4]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postmergesep">
+			<title>帖子合并分隔符</title>
+			<description><![CDATA[合并后，帖子之间的分隔符。默认为一条水平线“[hr]”。]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[[hr]]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="logip">
+			<title>显示发帖的IP地址</title>
+			<description><![CDATA[是否要显示发帖人的IP地址？显示哪些人的IP地址？]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[radio
+no=不显示IP
+hide=显示给管理员和版主
+show=显示给所有用户]]></optionscode>
+			<settingvalue><![CDATA[hide]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showeditedby">
+			<title>显示“编辑过”信息</title>
+			<description><![CDATA[当一个帖子被一个普通用户编辑，您是否想显示“编辑过”信息?]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showeditedbyadmin">
+			<title>显示管理员的“编辑过”信息</title>
+			<description><![CDATA[对于管理员发布的帖子，是否显示“编辑过”信息？]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxpostimages">
+			<title>每帖最大图片数</title>
+			<description><![CDATA[输入用户帖子所能使用的最大图片数量（包括表情）。设置为0则禁用此功能。]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxpostvideos">
+			<title>每帖最大视频数</title>
+			<description><![CDATA[输入用户每个帖子所能使用的最大视频数量。设置为0则禁用此功能。]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="subscribeexcerpt">
+			<title>订阅预览字符数</title>
+			<description><![CDATA[在新回复email提醒中发送多少字符的预览？]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[100]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="wordwrap">
+			<title>长字符串截断字符数量</title>
+			<description><![CDATA[如果一个单词字符数超过此值，则每隔此数量的字符自动插入一个空格将单词分开（有助于维持论坛版面）。设置为0来禁用。]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[80]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxquotedepth">
+			<title>最大嵌套引用标签</title>
+			<description><![CDATA[引用标签的最大嵌套深度。当引用回复帖子时，所有超过这一限额的嵌套引号将被自动删除。请注意此值只是在执行引用回复时起作用 - 用户仍然可以手动输入引用标签超过此限制，并且此设置将不会影响已提交的帖子。设置为0来禁用。]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="polloptionlimit">
+			<title>投票选项最大长度</title>
+			<description><![CDATA[每个投票选项最大的长度。设置为0则禁用。]]></description>
+			<disporder>18</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[250]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxpolloptions">
+			<title>投票选项最大数量</title>
+			<description><![CDATA[用户所能发布投票中选项的数量。]]></description>
+			<disporder>19</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="polltimelimit">
+			<title>投票时间限制</title>
+			<description><![CDATA[多少小时以后普通用户无法为他们的投票主题增加投票选项。设为0则无限制。]]></description>
+			<disporder>20</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[12]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="threadreview">
+			<title>显示最新回复</title>
+			<description><![CDATA[显示最新回复?]]></description>
+			<disporder>21</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="alloweditreason">
+			<title>允许编辑原因</title>
+			<description><![CDATA[是否允许用户为他们编辑的帖子增加一个可选的编辑原因？]]></description>
+			<disporder>22</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="attachments" title="附件" description="管理附件系统相关的设定。" disporder="12" isdefault="1">
+		<setting name="enableattachments">
+			<title>开启附件功能</title>
+			<description><![CDATA[如果想要关闭附件功能，设为否。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxattachments">
+			<title>每帖最大附件数</title>
+			<description><![CDATA[每个帖子用户允许上传的附件最大数量。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="attachthumbnails">
+			<title>在帖子中显示附件缩略图</title>
+			<description><![CDATA[您想要图片如何显示在帖子中?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[radio
+yes=缩略图
+no=完整大小的图片
+download=作为下载链接]]></optionscode>
+			<settingvalue><![CDATA[yes]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="attachthumbh">
+			<title>附件缩略图最大高度</title>
+			<description><![CDATA[输入附件缩略图最大的高度。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[96]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="attachthumbw">
+			<title>附件缩略图最大宽度</title>
+			<description><![CDATA[输入附件缩略图最大的宽度。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[96]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="memberlist" title="会员列表" description="本节允许您控制论坛的会员列表(memberlist.php)，如每页显示多少会员，启用或禁用某个功能。" disporder="13" isdefault="1">
+		<setting name="enablememberlist">
+			<title>启用会员列表功能</title>
+			<description><![CDATA[如果想要关闭会员列表功能，设为否。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="membersperpage">
+			<title>每页会员数</title>
+			<description><![CDATA[在会员列表页每页显示多少会员。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[20]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="default_memberlist_sortby">
+			<title>默认排序字段</title>
+			<description><![CDATA[选择会员排序的默认字段。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[select
+regdate=注册日期
+postnum=发帖数
+username=用户名
+lastvisit=最后访问]]></optionscode>
+			<settingvalue><![CDATA[regdate]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="default_memberlist_order">
+			<title>默认排序次序</title>
+			<description><![CDATA[选择会员排序的默认次序。<br />顺序: A-Z / 开头-结尾<br />倒序: Z-A / 结尾-开头]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[select
+ascending=升序
+descending=降序]]></optionscode>
+			<settingvalue><![CDATA[ascending]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="memberlistmaxavatarsize">
+			<title>头像最大显示尺寸</title>
+			<description><![CDATA[在会员列表页显示的头像最大尺寸，如果图片过大，将会自动缩放。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[70x70]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="reputation" title="声望系统" description="声望系统允许您的用户对其他用户打分并做评论。本节可以禁用或改变相关设置(reputation.php)。" disporder="14" isdefault="1">
+		<setting name="enablereputation">
+			<title>启用声望功能</title>
+			<description><![CDATA[如果您想禁用声望系统，设置为否。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="posrep">
+			<title>允许正面评价</title>
+			<description><![CDATA[允许用户给别人正面的声望评价?]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="negrep">
+			<title>允许负面评价</title>
+			<description><![CDATA[允许用户给别人负面的声望评价?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="neurep">
+			<title>允许中立评价</title>
+			<description><![CDATA[允许用户给别人中立的声望评价?]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="multirep">
+			<title>允许多次声望</title>
+			<description><![CDATA[用户是否可以给同一用户多次声望评价?<br />注意：这不会影响"帖子"评价]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="postrep">
+			<title>允许帖子声望</title>
+			<description><![CDATA[启用声望链接到帖子?]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="repsperpage">
+			<title>每页评论数</title>
+			<description><![CDATA[这里可以输入每页显示多少数量的评论。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxreplength">
+			<title>最大评价长度</title>
+			<description><![CDATA[一个声望评价的最大字符数。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[300]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="minreplength">
+			<title>最小评价长度</title>
+			<description><![CDATA[一个声望评价的最小字节数。]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="warning" title="警告系统设定" description="警告系统允许论坛工作人员对违规用户进行警告。此处管理警告系统的相关设置 (warnings.php)。" disporder="15" isdefault="1">
+		<setting name="enablewarningsystem">
+			<title>启用警告系统?</title>
+			<description><![CDATA[要完全禁用警告系统请设置为否。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowcustomwarnings">
+			<title>允许自定义警告类型?</title>
+			<description><![CDATA[允许自定义原因和点数。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="canviewownwarning">
+			<title>用户可以查看自己的警告?</title>
+			<description><![CDATA[设置为是允许用户在控制面板查看最近的警告，并在他们的个人资料中显示警告级别。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowanonwarningpms">
+			<title>允许匿名警告PM</title>
+			<description><![CDATA[允许版主发送匿名警告PM。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxwarningpoints">
+			<title>最大警告点数</title>
+			<description><![CDATA[当用户警告级别达到100%之前可以给用户的最大警告点数。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="privatemessaging" title="短消息" description="设置MyBB短消息系统(PM)的相关选项(private.php)。" disporder="16" isdefault="1">
+		<setting name="enablepms">
+			<title>启用私人信息功能</title>
+			<description><![CDATA[如果想禁用私人信息（短信）功能，请设置为否。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmquickreply">
+			<title>显示快速回复框</title>
+			<description><![CDATA[是否在PM信息下方显示一个快捷回复。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmsallowhtml">
+			<title>允许HTML</title>
+			<description><![CDATA[是否允许在短信中使用HTML。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmsallowmycode">
+			<title>允许MyCode</title>
+			<description><![CDATA[是否允许在短信中使用MyCode。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmsallowsmilies">
+			<title>允许表情</title>
+			<description><![CDATA[是否允许在短信中使用表情。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmsallowimgcode">
+			<title>允许[img]代码</title>
+			<description><![CDATA[是否允许在短信中使用 [img] 代码。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmsallowvideocode">
+			<title>允许 [video] 代码</title>
+			<description><![CDATA[是否允许在短信中使用 [video] 代码。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pmfloodsecs">
+			<title>短消息灌水检测</title>
+			<description><![CDATA[设定时间（秒），用户必须间隔这么长时间才能再次发送短消息。设置为0来禁用。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[60]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="showpmip">
+			<title>显示短消息IP地址</title>
+			<description><![CDATA[是否显示发送短消息的IP地址?接收者是否可以看到这个IP地址?]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[radio
+no=不显示IP
+hide=显示给管理员和版主
+show=显示给所有用户]]></optionscode>
+			<settingvalue><![CDATA[hide]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxpmquotedepth">
+			<title>最大PM嵌套引用层级</title>
+			<description><![CDATA[请注意此项只适用于快速回复的嵌套设定————用户仍然可以手动输入引用以突破此限制，并且该设定不会影响已发送的PM。设为0关闭。]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="calendar" title="日历" description="论坛日历显示公开和私有的事件列表，包括用户的生日。此处管理日历相关设定(calendar.php)。" disporder="17" isdefault="1">
+		<setting name="enablecalendar">
+			<title>启用日历功能</title>
+			<description><![CDATA[如果您想禁用日历功能，请选择“否”。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="whosonline" title="当前在线" description="管理当前在线功能(online.php)。" disporder="18" isdefault="1">
+		<setting name="wolcutoffmins">
+			<title>截止时间（分钟）</title>
+			<description><![CDATA[用户被标记为离开的时间。推荐值：15。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="refreshwol">
+			<title>刷新当前在线页面时间（分钟）</title>
+			<description><![CDATA["当前在线"页面的自动刷新时间。0表示关闭。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="wolorder">
+			<title>当前在线排序</title>
+			<description><![CDATA[以用户名或最后活跃排序在线的用户列表。注意：该设定仅影响门户和首页页面。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[select
+username=以用户名排序 (升序)
+activity=以最后活跃排序 (降序)]]></optionscode>
+			<settingvalue><![CDATA[username]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="userpruning" title="用户清理" description="用户清理（修剪 prune）允许你删除论坛中满足某些标准的用户。" disporder="19" isdefault="1">
+		<setting name="enablepruning">
+			<title>启用用户清理?</title>
+			<description><![CDATA[是否启用用户清理功能。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="enableprunebyposts">
+			<title>根据帖子数清理用户?</title>
+			<description><![CDATA[是否根据帖子数量作为清理用户的标准。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="prunepostcount">
+			<title>清理用户的帖子数阀值</title>
+			<description><![CDATA[帖子少于指定数量的用户将被清理]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="dayspruneregistered">
+			<title>清理用户的注册天数阀值</title>
+			<description><![CDATA[用户帖子少于指定数量且注册天数大于此处设置的数值则清理用户。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[90]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="pruneunactived">
+			<title>清理未激活用户?</title>
+			<description><![CDATA[开启则清理未激活的用户]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="dayspruneunactivated">
+			<title>清理未激活用户的注册天数阀值</title>
+			<description><![CDATA[未激活用户超过多少天则被清理。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[90]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="prunethreads">
+			<title>清理用户的 帖子/主题</title>
+			<description><![CDATA[对于这些将要移除的用户，你是否也要移除他们的所有 帖子/主题]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="portal" title="门户设定" description="门户相关设置，包括最新帖、谁在线、论坛统计资料、公告和其它。本节设置首页的控制方面(portal.php)。" disporder="20" isdefault="1">
+		<setting name="portal">
+			<title>开启门户</title>
+			<description><![CDATA[如果想要关闭门户功能，设为否。]]></description>
+  			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_announcementsfid">
+			<title>展示公告的版块</title>
+			<description><![CDATA[请选择从哪些板块提取公告。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[forumselect]]></optionscode>
+			<settingvalue><![CDATA[-1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_numannouncements">
+			<title>显示公告数</title>
+			<description><![CDATA[请输入主页面每页显示的公告数。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showwelcome">
+			<title>显示欢迎框</title>
+			<description><![CDATA[是否显示访问者/会员欢迎框。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showpms">
+			<title>显示短信数量</title>
+			<description><![CDATA[显示当前用户有多少未读短信等。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showstats">
+			<title>显示论坛统计资料</title>
+			<description><![CDATA[显示总发帖数、主题数、会员数和最后注册的会员。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showwol">
+			<title>显示谁在线</title>
+			<description><![CDATA[显示“谁在线”信息当用户访问论坛首页的时候。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showsearch">
+			<title>显示搜索框</title>
+			<description><![CDATA[您想显示搜索框以便于用户快速搜索论坛?]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showdiscussions">
+			<title>显示最后发帖</title>
+			<description><![CDATA[您想显示当前版块最后发帖?]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_showdiscussionsnum">
+			<title>最后发帖显示数目</title>
+			<description><![CDATA[请输入当前版块最后发帖的显示数目。]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="portal_excludediscussion">
+			<title>从最近主题中排除的版块</title>
+			<description><![CDATA[请选择需要排除的版块。]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[forumselect]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="search" title="搜索系统" description="设置主题和帖子搜索的相关选项。" disporder="21" isdefault="1">
+		<setting name="searchtype">
+			<title>搜索类型</title>
+			<description><![CDATA[请选择系统使用的搜索类型。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[php
+<select name=\"upsetting[{$setting['name']}]\"><option value=\"standard\">".($lang->setting_searchtype_standard?$lang->setting_searchtype_standard:"Standard")."</option>".($db->supports_fulltext("threads") && $db->supports_fulltext_boolean("posts")?"<option value=\"fulltext\"".($setting['value']=="fulltext"?" selected=\"selected\"":"").">".($lang->setting_searchtype_fulltext?$lang->setting_searchtype_fulltext:"Full Text")."</option>":"")."</select>]]></optionscode>
+			<settingvalue><![CDATA[standard]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="searchfloodtime">
+			<title>搜索间隔（秒）</title>
+			<description><![CDATA[输入搜索间隔的最短时间，单位：秒。这可以防止用户不断执行搜索而使服务器超载。设置为0来禁用。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[30]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="minsearchword">
+			<title>最小关键词长度</title>
+			<description><![CDATA[设置搜索单词的最小字符数。设置为0来禁用（并且接受在MySQL中标准搜索强制为3，全文检索强制为4）。如果您使用MySQL全文检索并且此值设置小于MySQL的设定，则MySQL的设定将覆盖此设定。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="searchhardlimit">
+			<title>强制最大搜索结果数</title>
+			<description><![CDATA[输入进行处理的最大结果数。设置为0来禁用。在较大的论坛（超过100万个帖子）本设置应不超过1000。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="clickablecode" title="快捷表情和BB Code" description="管理可插入的快捷表情和默认的MyCode代码。" disporder="22" isdefault="1">
+		<setting name="bbcodeinserter">
+			<title>可点击MyCode编辑器</title>
+			<description><![CDATA[设置此项为“开”，在发帖页面编辑器中显示可点击代码按钮。关闭此项将同时禁用表情插入功能。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="partialmode">
+			<title>局部模式的MyCode编辑器</title>
+			<description><![CDATA[选是则编辑器会处于局部模式。许多MyCodes如[quote]和[img]将会以原样插入。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>0</isdefault>
+		</setting>
+		<setting name="smilieinserter">
+			<title>可点击表情插入</title>
+			<description><![CDATA[如果此项设置为“开”，可点击表情将出现在发帖页面。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[onoff]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smilieinsertertot">
+			<title>显示表情数</title>
+			<description><![CDATA[在表情框中显示多少个表情。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[20]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smilieinsertercols">
+			<title>表情列数</title>
+			<description><![CDATA[输入表情框中表情的列数。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[4]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowbasicmycode">
+			<title>允许基础MyCodes</title>
+			<description><![CDATA[设置为是则允许用户使用基础MyCodes，比如Bold, Italic, Underline, Strike-through 和 HR。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowcolormycode">
+			<title>允许Color MyCode</title>
+			<description><![CDATA[设置为是则允许用户使用Color MyCode。]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowsizemycode">
+			<title>允许Size MyCode</title>
+			<description><![CDATA[设置为是则允许用户使用Size MyCode]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowfontmycode">
+			<title>允许Font MyCode</title>
+			<description><![CDATA[设置为是则允许用户使用Font MyCode.]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowlinkmycode">
+			<title>允许Link MyCode</title>
+			<description><![CDATA[设置为是则允许用户使用URL MyCode.]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowemailmycode">
+			<title>允许Email MyCode</title>
+			<description><![CDATA[设置为是则允许用户使用Email MyCode.]]></description>
+			<disporder>11</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowalignmycode">
+			<title>允许Alignment MyCode</title>
+			<description><![CDATA[设置为是则允许用户使用Align MyCode.]]></description>
+			<disporder>12</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowlistmycode">
+			<title>允许List MyCode</title>
+			<description><![CDATA[设置为是则允许用户使用List MyCode.]]></description>
+			<disporder>13</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowcodemycode">
+			<title>允许Code MyCodes</title>
+			<description><![CDATA[设置为是则允许用户使用Code 和 PHP MyCodes.]]></description>
+			<disporder>14</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowsymbolmycode">
+			<title>允许Symbol MyCodes</title>
+			<description><![CDATA[设置为是则允许用户使用 (tm), (c) 和 (r) MyCodes.]]></description>
+			<disporder>15</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="allowmemycode">
+			<title>允许Me MyCodes</title>
+			<description><![CDATA[设置为是则允许用户使用 /me 和 /slap MyCodes.]]></description>
+			<disporder>16</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="guestimages">
+			<title>为访客解析[img] MyCode</title>
+			<description><![CDATA[设置为是则为访客解析帖子中的图片，如果为否则显示为一个链接。]]></description>
+			<disporder>17</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="guestvideos">
+			<title>为访客解析[video] MyCode</title>
+			<description><![CDATA[设置为是则为访客解析帖子中的视频，如果为否则显示为一个链接。]]></description>
+			<disporder>18</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="cpprefs" title="控制面板属性(全局)" description="本节让您可以设定全局管理控制面板偏好。" disporder="23" isdefault="1">
+		<setting name="cplanguage">
+			<title>控制面板语言</title>
+			<description><![CDATA[控制面板的语言。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[adminlanguage]]></optionscode>
+			<settingvalue><![CDATA[chinese]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="cpstyle">
+			<title>控制面板样式</title>
+			<description><![CDATA[控制面板将使用的默认样式。样式在样式文件夹中。以样式名称命名的文件夹，style.css是css样式表文件。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[cpstyle]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="maxloginattempts">
+			<title>登录尝试的最大次数</title>
+			<description><![CDATA[被锁定之前可以尝试登陆的次数，即超过这个次数限定该帐号将被锁定。设置为0来禁用。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="loginattemptstimeout">
+			<title>登录尝试超时</title>
+			<description><![CDATA[如果一个用户登陆失败次数达到最大值而被锁定，多长时间才能再次登陆？（单位：分钟）]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[15]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="mailsettings" title="邮件设定" description="本节允许您设置MyBB的邮件系统，如通过PHP mail或者SMTP发送邮件。" disporder="24" isdefault="1">
+		<setting name="mail_handler">
+			<title>邮件处理</title>
+			<description><![CDATA[选择发送邮件的方式。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[select
+mail=PHP mail
+smtp=SMTP mail]]></optionscode>
+			<settingvalue><![CDATA[mail]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smtp_host">
+			<title>SMTP服务器名</title>
+			<description><![CDATA[SMTP服务器的名称。<br />只在邮件处理中选择 SMTP Mail 时需要。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smtp_port">
+			<title>SMTP端口</title>
+			<description><![CDATA[SMTP服务器的端口。<br />只在邮件处理中选择 SMTP Mail 时需要。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smtp_user">
+			<title>SMTP用户名</title>
+			<description><![CDATA[登陆SMTP服务器的用户名。<br />只在邮件处理中选择 SMTP Mail 时需要，并且SMTP服务器需要认证。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="smtp_pass">
+			<title>SMTP密码</title>
+			<description><![CDATA[登陆SMTP服务器的密码<br />只在邮件处理中选择 SMTP Mail 时需要，并且SMTP服务器需要认证。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[passwordbox]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="secure_smtp">
+			<title>SMTP加密方式</title>
+			<description><![CDATA[选择服务器的加密方式。<br />只在邮件处理中选择 SMTP Mail 时需要]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[select
+0=No encryption
+1=SSL encryption
+2=TLS encryption]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="mail_parameters">
+			<title>PHP mail()函数的附加参数</title>
+			<description><![CDATA[为PHP mail()函数设置额外的参数，仅在选择了'PHP mail'时使用。 <a href="http://php.net/function.mail" target="_blank">更多信息</a>]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="mail_logging">
+			<title>邮件日志</title>
+			<description><![CDATA[这个设置允许您设置如何记录通过“发送主题给朋友”功能发送邮件的日志。在一些国家，记录所有内容是违法的。]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[select
+0=关闭email记录
+1=记录email除内容外的其它信息
+2=记录所有]]></optionscode>
+			<settingvalue><![CDATA[2]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="mail_message_id">
+			<title>在邮件标题中添加消息ID</title>
+			<description><![CDATA[禁用此选项对某些共享主机解决了论坛的电子邮件被标记为垃圾的问题。]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="contactsettings" title="联系设定" description="联系页面的相关设定(contact.php)。" disporder="25" isdefault="1">
+		<setting name="contact">
+			<title>启用联系页面</title>
+			<description><![CDATA[设为是则允许访问联系页面。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contact_guests">
+			<title>对非会员关闭联系页面</title>
+			<description><![CDATA[设置是否禁止非会员访问联系页面。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contact_badwords">
+			<title>在联系页面开启关键字过滤</title>
+			<description><![CDATA[设为是则标题和信息字段会被过滤后发送。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contact_maxsubjectlength">
+			<title>最大标题长度</title>
+			<description><![CDATA[允许的最大标题长度(字节)，设为0则无限制。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[85]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contact_minmessagelength">
+			<title>最小信息长度</title>
+			<description><![CDATA[信息内容的最小字节数。设为0则无限制。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[5]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="contact_maxmessagelength">
+			<title>最大信息长度</title>
+			<description><![CDATA[信息内容的最大字节数。设为0则无限制。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[65535]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="purgespammer" title="清理Spammer" description="管理清理Spammer功能的相关选项。" disporder="26" isdefault="1">
+		<setting name="purgespammergroups">
+			<title>允许的用户组</title>
+			<description><![CDATA[选择允许使用清理功能的用户组。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[3,4,6]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="purgespammerpostlimit">
+			<title>发帖限制</title>
+			<description><![CDATA[设置发帖数超过指定值的用户不在清理列表内。设为0则不进行发帖检查，不推荐这样做。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[10]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="purgespammerbandelete">
+			<title>封禁或删除Spammer</title>
+			<description><![CDATA[封禁还是删除?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[radio
+ban=封禁(永久)
+delete=删除]]></optionscode>
+			<settingvalue><![CDATA[ban]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="purgespammerbangroup">
+			<title>封禁用户组</title>
+			<description><![CDATA[输入封禁用户组的ID(不是名称)，默认为7，默认封禁用户组。只有上面设置了'封禁'选项此项才有效。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[7]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="purgespammerbanreason">
+			<title>封禁理由</title>
+			<description><![CDATA[用于封禁spammer的理由]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[Spam]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="purgespammerapikey">
+			<title>Stop Forum Spam API Key</title>
+			<description><![CDATA[提交spammer信息到Stop Forum Spam数据库需要一个API key。您可以在<a href="http://stopforumspam.com/signup" target="_blank">这里</a>申请一个。]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+	</settinggroup>
+	<settinggroup name="stopforumspam" title="Stop Forum Spam" description="管理StopForumSpam.com相关选项" disporder="27" isdefault="1">
+		<setting name="enablestopforumspam_on_register">
+			<title>通过StopForumSpam检查注册?</title>
+			<description>
+				<![CDATA[是否要在StopForumSpam.com数据库里检测所有新用户注册?]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_on_contact">
+			<title>是否通过StopForumSpam检测所有访客提交的联系信息?</title>
+			<description>
+				<![CDATA[在联系页面里访客使用的email和IP地址是否要在StopForumSpam里检查一遍?]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_on_newreply">
+			<title>通过StopForumSpam检查访客回复?</title>
+			<description>
+				<![CDATA[访客提交新回复时是否通过StopForumSpam检测他的用户名和IP地址?]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_on_newthread">
+			<title>通过StopForumSpam检查访客主题?</title>
+			<description>
+				<![CDATA[访客提交新主题时是否通过StopForumSpam检测他的用户名和IP地址?]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_min_weighting_before_spam">
+			<title>stop forum spam最小权值?</title>
+			<description>
+				<![CDATA[定义用户为spammer的最小权值?取值范围0到100]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[50.00]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_check_usernames">
+			<title>检查用户名?</title>
+			<description>
+				<![CDATA[在StopForumSpam数据库里检查用户的用户名?]]></description>
+			<disporder>6</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_check_emails">
+			<title>检查email地址?</title>
+			<description>
+				<![CDATA[在StopForumSpam数据库里检查用户的email地址?]]></description>
+			<disporder>7</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_check_ips">
+			<title>检查IP地址?</title>
+			<description>
+				<![CDATA[在StopForumSpam数据库里检查用户的IP地址?]]></description>
+			<disporder>8</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_block_on_error">
+			<title>在StopForumSpam出错时是否封锁?</title>
+			<description>
+				<![CDATA[如果使用StopForumSpam API接受信息时出现错误，是否要封锁用户?]]></description>
+			<disporder>9</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+		<setting name="stopforumspam_log_blocks">
+			<title>记录StopForumSpam封锁?</title>
+			<description>
+				<![CDATA[是否记录每一个StopForumSpam封锁?]]></description>
+			<disporder>10</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+		</setting>
+	</settinggroup>
+	<settinggroup name="contactdetails" title="联系详情" description="联系字段的相关设定。" disporder="28" isdefault="1">
+		<setting name="allowicqfield">
+			<title>允许使用ICQ号码字段的用户组</title>
+			<description><![CDATA[选择允许使用ICQ号码联系字段的用户组。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[-1]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="allowaimfield">
+			<title>允许使用AIM字段的用户组</title>
+			<description><![CDATA[选择允许使用AIM联系字段的用户组。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[-1]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="allowyahoofield">
+			<title>允许使用yahoo ID字段的用户组</title>
+			<description><![CDATA[选择允许使用yahoo ID联系字段的用户组。]]></description>
+			<disporder>3</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[-1]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="allowskypefield">
+			<title>允许使用Skype ID字段的用户组</title>
+			<description><![CDATA[选择允许使用Skype ID联系字段的用户组。]]></description>
+			<disporder>4</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[-1]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="allowgooglefield">
+			<title>允许使用Google Talk ID字段的用户组</title>
+			<description><![CDATA[选择允许使用Google Talk ID联系字段的用户组。]]></description>
+			<disporder>5</disporder>
+			<optionscode><![CDATA[groupselect]]></optionscode>
+			<settingvalue><![CDATA[-1]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+	</settinggroup>
+	<settinggroup name="statspage" title="统计页面" description="管理统计页面的相关设定。" disporder="28" isdefault="1">
+		<setting name="statsenabled">
+			<title>开启统计页面</title>
+			<description><![CDATA[是否启用论坛的统计页面。]]></description>
+			<disporder>1</disporder>
+			<optionscode><![CDATA[yesno]]></optionscode>
+			<settingvalue><![CDATA[1]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+		<setting name="statscachetime">
+			<title>统计缓存时间</title>
+			<description><![CDATA[刷新统计页面缓存的间隔时间(小时)，设为0则关闭缓存。]]></description>
+			<disporder>2</disporder>
+			<optionscode><![CDATA[text]]></optionscode>
+			<settingvalue><![CDATA[0]]></settingvalue>
+			<isdefault>1</isdefault>
+			<helpkey></helpkey>
+		</setting>
+	</settinggroup>
+</settings>
